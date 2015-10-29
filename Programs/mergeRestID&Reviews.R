@@ -27,11 +27,14 @@ reviewCount <- reviewCount[order(reviewCount$Freq),]
 length(reviewCount[which (reviewCount$Freq > 5),1])
 length(reviewCount[which (reviewCount$Freq > 10),1])
 
-# the total number of reviews
+# total number of restaurant reviews 
+sum(reviewCount[,2])
+
+# the total number of reviews (users having more than 5 reviews)
 sum(reviewCount[which (reviewCount$Freq <= 5),2])
 sum(reviewCount[which (reviewCount$Freq > 5),2])
 
-# the total number of reviews
+# the total number of reviews (users having more than 10 reviews)
 sum(reviewCount[which (reviewCount$Freq <= 10),2])
 sum(reviewCount[which (reviewCount$Freq > 10),2])
 
